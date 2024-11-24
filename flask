@@ -8,11 +8,11 @@ import difflib
 app = Flask(__name__)
 
 # Twitter APIの認証情報
-api_key = "YgR5cbRclIFSI7q6A77RvsjIj"
-api_secret = "IJ845WQDbbWKR4Hsis66BvG1W7R6b6X3TBwfGQFiDFv10uzDZJ"
-access_token = "72551941-mdtnuHbUQrbrsV3d5jeiHKXRkB8RwKgHGYGTnznl1"
-access_token_secret = "c95LRscnVMzmT6lR2iK9RYiciLypwHjl5OYxekg47EG5k"
-bearer_token = "AAAAAAAAAAAAAAAAAAAAAPRLNAEAAAAAQbfilja%2FufYbuzYBUkzkgAqlW0g%3DzYezAiDEtdLCvkBucScCDJcc2qtTOmUGk3s69XxlvhhLjAbrQq"
+api_key = "YOUR_API_KEY"
+api_secret = "YOUR_API_SECRET"
+access_token = "YOUR_ACCESS_TOKEN"
+access_token_secret = "YOUR_ACCESS_TOKEN_SECRET"
+bearer_token = "YOUR_BEARER_TOKEN"
 
 # 認証を設定
 auth = tweepy.OAuth1UserHandler(api_key, api_secret, access_token, access_token_secret)
