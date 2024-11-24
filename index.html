@@ -3,49 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twitter Reply Analyzer</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>My GitHub Website</title>
 </head>
 <body>
-    <h1>Twitter Reply Analyzer</h1>
-    <form id="tweetForm">
-        <label for="tweetId">Enter Tweet ID:</label>
-        <input type="text" id="tweetId" placeholder="Enter Tweet ID here" required>
-        <button type="submit">Fetch Replies</button>
-    </form>
-
-    <div id="replyResults"></div>
-
-    <script>
-        $(document).ready(function() {
-            $('#tweetForm').on('submit', function(e) {
-                e.preventDefault();
-                const tweetId = $('#tweetId').val();
-                $('#replyResults').html('Loading...');
-
-                $.ajax({
-                    url: '/fetch_replies',
-                    type: 'POST',
-                    contentType: 'application/json',
-                    data: JSON.stringify({ tweet_id: tweetId }),
-                    success: function(data) {
-                        $('#replyResults').html('<h3>Replies:</h3>');
-                        if (data.length === 0) {
-                            $('#replyResults').append('<p>No replies found.</p>');
-                        } else {
-                            const list = $('<ul></ul>');
-                            data.forEach(reply => {
-                                list.append(`<li>${reply.text}</li>`);
-                            });
-                            $('#replyResults').append(list);
-                        }
-                    },
-                    error: function() {
-                        $('#replyResults').html('<p>Error fetching replies.</p>');
-                    }
-                });
-            });
-        });
-    </script>
+    <h1>Welcome to My GitHub Website</h1>
+    <p>This site is hosted on GitHub Pages.</p>
 </body>
 </html>
